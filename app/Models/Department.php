@@ -13,7 +13,6 @@ class Department extends Model
     protected $table = "department";
 
     protected $fillable= [
-        'id',
         'department_name',
         'deleted_at',
         'created_at',
