@@ -21,15 +21,18 @@
                     </div>
 
                     <div class="col-12">
-                        <form class="row g-3">
-                            <div class="col-md-6">
-                                <label for="inputDepartment" class="form-label">Add Department</label>
-                                <input type="text" class="form-control" id="inputDepartment" placeholder="Input Department">
-                            </div>
-                            <div class="col-12">
-                                <hr>
-                                <button type="submit" class="btn btn-primary">Save</button>
-                            </div>
+                        <form action="/department/create/save" method="post">
+                            @csrf
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="inputDepartment" class="form-label">Add Department</label>
+                                    <input type="text" class="form-control" name="department_name" placeholder="Input Department" required>
+                                </div>
+                                <div class="col-12">
+                                    <hr>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </div>
+                            </form>
                         </form>
                     </div>
                 </div>
