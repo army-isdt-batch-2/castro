@@ -37,7 +37,7 @@
                             </div>
                             
                             <div class="d-grid gap-2">
-                                <button class="btn btn-dark rounded-pill" type="button">Log In</button> 
+                                <a href="/department" class="btn btn-dark pull-right">Log In</a> 
                             </div>
                         </form>
                     </div>
