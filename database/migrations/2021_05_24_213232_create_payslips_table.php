@@ -17,6 +17,7 @@ class CreatePayslipsTable extends Migration
             $table->id();
             $table->date('cutoff_start');
             $table->date('cutoff_end');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

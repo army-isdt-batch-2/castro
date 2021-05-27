@@ -32,6 +32,7 @@ class CreateEmployeesTable extends Migration
             $table->unsignedBigInteger('ph_id')->index();
             $table->unsignedBigInteger('pi_id')->index();
             $table->unsignedBigInteger('tax_id')->index();
+            $table->softDeletes();
             $table->timestamps();
             
             $table->foreign('department_id')->references('id')->on('department');

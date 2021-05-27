@@ -22,6 +22,7 @@ class CreateLeavesTable extends Migration
             $table->date('end_date');
             $table->longText('notes');
             $table->unsignedBigInteger('employees_id')->index();
+            $table->softDeletes();
             $table->timestamps();
 
             $table->foreign('employees_id')->references('id')->on('employees');
