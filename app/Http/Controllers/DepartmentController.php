@@ -10,7 +10,9 @@ class DepartmentController extends Controller
 {
     public function department()
     {
-        return view('department');
+        return view('department')->with([
+            'data' => Department::all()
+        ]);
     }
 
     public function department_create()
