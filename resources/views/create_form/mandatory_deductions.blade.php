@@ -21,36 +21,39 @@
                     </div>
 
                     <div class="col-12">
-                        <form class="row g-3">
-                            <div class="col-md-4">
-                                <label for="inputContriType" class="form-label">Contribution Type</label>
-                                <select id="inputContriTyp" class="form-select">
-                                    <option selected>Choose...</option>
-                                    <option>Contribution Type 1</option>
-                                    <option>Contribution Type 2</option>
-                                </select>
-                            </div>
-                            <div class="col-md-8">
-                                <label for="inputBaseR" class="form-label">Base Range</label>
-                                <input type="text" class="form-control" id="inputBaseR" placeholder="Input Base Range">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="inputBaseR" class="form-label">Monthly Contribution</label>
-                                <input type="number" class="form-control" id="inputBaseR">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="inputBaseR" class="form-label">Employee Share</label>
-                                <input type="number" class="form-control" id="inputBaseR">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="inputBaseR" class="form-label">Employer Share</label>
-                                <input type="number" class="form-control" id="inputBaseR">
-                            </div>
-                            <div class="col-12">
-                                <hr>
-                                <button type="submit" class="btn btn-primary">Save</button>
-                            </div>
-                        </form>
+                        <form action="/mandatory_deductions/create/save" method="post">
+                            @csrf
+                            <form class="row g-3">
+                                <div class="col-md-4">
+                                    <label for="inputContriType" class="form-label">Contribution Type</label>
+                                    <select id="inputContriTyp" class="form-select" name="contribution_type" required>
+                                        <option selected>Choose...</option>
+                                        <option>Contribution Type 1</option>
+                                        <option>Contribution Type 2</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-8">
+                                    <label for="inputBaseR" class="form-label">Base Range</label>
+                                    <input type="text" class="form-control" id="inputBaseR" placeholder="Input Base Range" name="basic_range" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inputBaseR" class="form-label">Monthly Contribution</label>
+                                    <input type="number" class="form-control" id="inputBaseR" name="monthly_contribution" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inputBaseR" class="form-label">Employee Share</label>
+                                    <input type="number" class="form-control" id="inputBaseR" name="employee_share" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inputBaseR" class="form-label">Employer Share</label>
+                                    <input type="number" class="form-control" id="inputBaseR" name="employer_share" required>
+                                </div>
+                                <div class="col-12">
+                                    <hr>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </div>
+                            </form>
+                        </form>    
                     </div>
                 </div>
             </div>

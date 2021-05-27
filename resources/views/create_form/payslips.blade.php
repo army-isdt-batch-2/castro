@@ -21,20 +21,23 @@
                     </div>
 
                     <div class="col-12">
-                        <form class="row g-3">
-                        <div class="col-md-6">
-                                <label for="inputAttendanceDate" class="form-label">Cut-off start</label>
-                                <input type="date" class="form-control" id="inputAttendanceDate">
-                            </div>
+                        <form action="/payslips/create/save" method="post">
+                            @csrf
+                            <form class="row g-3">
                             <div class="col-md-6">
-                                <label for="inputAttendanceDate" class="form-label">Cut-off end</label>
-                                <input type="date" class="form-control" id="inputAttendanceDate">
-                            </div>
-                            <div class="col-12">
-                                <hr>
-                                <button type="submit" class="btn btn-primary">Process</button>
-                            </div>
-                        </form>
+                                    <label for="inputAttendanceDate" class="form-label">Cut-off start</label>
+                                    <input type="date" class="form-control" id="inputAttendanceDate" name="cutoff_start" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputAttendanceDate" class="form-label">Cut-off end</label>
+                                    <input type="date" class="form-control" id="inputAttendanceDate" name="cutoff_end" required>
+                                </div>
+                                <div class="col-12">
+                                    <hr>
+                                    <button type="submit" class="btn btn-primary">Process</button>
+                                </div>
+                            </form>
+                        </form>     
                     </div>
                 </div>
             </div>

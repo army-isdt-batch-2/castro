@@ -21,16 +21,19 @@
                     </div>
 
                     <div class="col-12">
-                        <form class="row g-3">
-                            <div class="col-md-8">
-                                <label for="inputAttendanceDate" class="form-label">Attendance Date</label>
-                                <input type="date" class="form-control" id="inputAttendanceDate">
-                            </div>
-                            <div class="col-12">
-                                <hr>
-                                <button type="submit" class="btn btn-primary">Save</button>
-                            </div>
-                        </form>
+                        <form action="/timekeeping/create/save" method="post">
+                            @csrf
+                            <form class="row g-3">
+                                <div class="col-md-8">
+                                    <label for="inputAttendanceDate" class="form-label">Attendance Date</label>
+                                    <input type="date" class="form-control" id="inputAttendanceDate" name="timekeeping_date" required>
+                                </div>
+                                <div class="col-12">
+                                    <hr>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </div>
+                            </form>
+                        </form>   
                     </div>
                 </div>
             </div>
